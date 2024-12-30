@@ -1,5 +1,6 @@
 import React from 'react'
 import CustomSelect from './CustomSelect'
+import { Link } from 'react-router-dom'
 
 const USFlag = () => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7410 3900" className="w-4 h-2.5 mr-2">
@@ -47,15 +48,15 @@ export default function Topbar() {
                 <div className="flex items-center justify-between h-10">
                     {/* Left Navigation */}
                     <div className="flex items-center divide-x divide-gray-300">
-                        <a href="/about" className="hover:text-gray-600 transition-colors pr-4">
+                        <Link to="#" className="hover:text-gray-600 transition-colors pr-4">
                             About Us
-                        </a>
-                        <a href="/wishlist" className="hover:text-gray-600 transition-colors px-4">
+                        </Link>
+                        <Link to="#" className="hover:text-gray-600 transition-colors px-4">
                             Wishlist
-                        </a>
-                        <a href="/track" className="hover:text-gray-600 transition-colors pl-4">
+                        </Link>
+                        <Link to="#" className="hover:text-gray-600 transition-colors pl-4">
                             Order Tracking
-                        </a>
+                        </Link>
                     </div>
 
                     {/* Right Navigation */}

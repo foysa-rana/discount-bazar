@@ -29,10 +29,10 @@ const CustomSelect = ({ options, defaultValue, onChange }) => {
         <div className="relative inline-block text-left" ref={dropdownRef}>
             <button
                 type="button"
-                className="inline-flex items-center justify-between w-full text-gray-900 hover:text-gray-600 transition-colors"
+                className="inline-flex items-center justify-between w-full text-gray-900 hover:text-gray-600 transition-colors "
                 onClick={() => setIsOpen(!isOpen)}
             >
-                <span className="text-sm font-semibold">{selectedOption.label}</span>
+                <span className="text-xs font-semibold">{selectedOption.label}</span>
                 <IoChevronDown className={`ml-1 h-4 w-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
             </button>
 
@@ -42,7 +42,7 @@ const CustomSelect = ({ options, defaultValue, onChange }) => {
                         {options.map((option) => (
                             <button
                                 key={option.value}
-                                className={`block w-full px-4 py-2 text-sm text-left hover:bg-gray-50 hover:text-[#FBB528] transition-colors
+                                className={`block w-full px-4 py-2 text-xs text-left hover:bg-gray-50 hover:text-[#FBB528] transition-colors
                                     ${selectedOption.value === option.value ? 'text-[#FBB528]' : 'text-gray-900'}`}
                                 onClick={() => handleOptionClick(option)}
                             >
