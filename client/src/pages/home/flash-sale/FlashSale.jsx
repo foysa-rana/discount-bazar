@@ -103,22 +103,22 @@ function CountdownTimer() {
     }, [])
 
     return (
-        <div className="flex items-center justify-center gap-12 py-4 px-6 rounded-lg w-full">
+        <div className="flex items-center justify-center gap-4 sm:gap-12 py-4 px-2 sm:px-6 rounded-lg w-full">
             <div className="text-center">
-                <div className="text-5xl font-bold text-gray-700">{String(timeLeft.days).padStart(2, '0')}</div>
-                <div className="text-xs text-gray-500">DAYS</div>
+                <div className="text-3xl sm:text-5xl font-bold text-gray-700">{String(timeLeft.days).padStart(2, '0')}</div>
+                <div className="text-[10px] sm:text-xs text-gray-500">DAYS</div>
             </div>
             <div className="text-center">
-                <div className="text-5xl font-bold text-gray-700">{String(timeLeft.hours).padStart(2, '0')}</div>
-                <div className="text-xs text-gray-500">HOURS</div>
+                <div className="text-3xl sm:text-5xl font-bold text-gray-700">{String(timeLeft.hours).padStart(2, '0')}</div>
+                <div className="text-[10px] sm:text-xs text-gray-500">HOURS</div>
             </div>
             <div className="text-center">
-                <div className="text-5xl font-bold text-gray-700">{String(timeLeft.minutes).padStart(2, '0')}</div>
-                <div className="text-xs text-gray-500">MINUTES</div>
+                <div className="text-3xl sm:text-5xl font-bold text-gray-700">{String(timeLeft.minutes).padStart(2, '0')}</div>
+                <div className="text-[10px] sm:text-xs text-gray-500">MINUTES</div>
             </div>
             <div className="text-center">
-                <div className="text-5xl font-bold text-gray-700">{String(timeLeft.seconds).padStart(2, '0')}</div>
-                <div className="text-xs text-gray-500">SECONDS</div>
+                <div className="text-3xl sm:text-5xl font-bold text-gray-700">{String(timeLeft.seconds).padStart(2, '0')}</div>
+                <div className="text-[10px] sm:text-xs text-gray-500">SECONDS</div>
             </div>
         </div>
     )
@@ -126,43 +126,43 @@ function CountdownTimer() {
 
 export default function FlashSale() {
     return (
-        <div className="py-8">
-            <div className="container mx-auto px-4">
+        <div className="py-4 sm:py-8">
+            <div className="container mx-auto px-2 sm:px-4">
                 {/* Header */}
-                <h2 className="text-4xl font-bold text-center mb-0 text-gray-900">Flash Sale</h2>
-                <div className="flex justify-center">
-                    <Link to="#" className="text-sm text-[#fae668] hover:underline font-medium ml-auto border-2 border-[#fae668] px-4 py-2 mb-2">
+                <h2 className="text-2xl sm:text-4xl font-bold text-center mb-2 text-gray-900">Flash Sale</h2>
+                <div className="flex justify-center mb-4">
+                    <Link to="#" className="text-xs sm:text-sm text-[#fae668] hover:underline font-medium border-2 border-[#fae668] px-3 py-1 sm:px-4 sm:py-2 ml-auto">
                         SHOP ALL PRODUCTS
                     </Link>
                 </div>
-                <div className="flex flex-col lg:flex-row gap-6">
+                <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
                     {/* Left Banner */}
-                    <div className="lg:w-[50%]">
+                    <Link to="#" className="lg:w-[50%]">
                         <div className="relative h-full rounded-lg overflow-hidden bg-[#F0F2F9]">
                             <img
                                 src={flashSelProduct}
                                 alt="Flash Sale"
-                                className="w-full h-[70%] xl:h-[75%] object-cover"
+                                className="w-full h-[60%] sm:h-[70%] xl:h-[75%] object-cover"
                             />
-                            <div className="absolute top-4 right-4">
-                                <div className="text-[#ff1f5a] text-3xl font-bold leading-tight">
+                            <div className="absolute top-2 sm:top-4 right-2 sm:right-4">
+                                <div className="text-[#ff1f5a] text-xl sm:text-3xl font-bold leading-tight">
                                     Flash<br />Sale
                                 </div>
                             </div>
-                            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-full">
+                            <div className="relative bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 w-full mt-8">
                                 <div className="text-center">
-                                    <div className="text-3xl font-semibold mb-1 text-[#79A1BD]">LIMITED TIME OFFER</div>
+                                    <div className="text-xl sm:text-3xl font-semibold mb-1 text-[#79A1BD]">LIMITED TIME OFFER</div>
                                 </div>
                                 <CountdownTimer />
                             </div>
                         </div>
-                    </div>
+                    </Link>
 
                     {/* Right Products Grid */}
                     <div className="lg:w-[60%]">
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4">
                             {products.map(product => (
-                                <ProductsCard key={product.id} product={product} />
+                                <ProductsCard key={product.id} product={product} border={true} />
                             ))}
                         </div>
                     </div>

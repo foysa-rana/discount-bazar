@@ -1,6 +1,7 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Autoplay } from 'swiper/modules'
+import { FaStar } from 'react-icons/fa'
 
 // Import Swiper styles
 import 'swiper/css'
@@ -17,58 +18,81 @@ const categories = [
         title: 'Camera & Photo',
         products: 4,
         image: category1,
+        rating: 4.5,
+        reviews: 10,
     },
     {
         title: 'Smart Phone & Table',
         products: 4,
         image: category2,
+        rating: 4.0,
+        reviews: 8,
     },
     {
         title: 'Sport & Outdoor',
         products: 2,
         image: category3,
+        rating: 4.8,
+        reviews: 5,
     },
     {
         title: 'Jewelry & Watches',
         products: 3,
         image: category4,
+        rating: 4.2,
+        reviews: 7,
     },
     {
         title: 'Health & Beauty',
         products: 3,
         image: category5,
+        rating: 4.6,
+        reviews: 6,
     },
     {
         title: 'Camera & Photo',
         products: 4,
         image: category1,
+        rating: 4.5,
+        reviews: 10,
     },
     {
         title: 'Smart Phone & Table',
         products: 4,
         image: category2,
+        rating: 4.0,
+        reviews: 8,
     },
     {
         title: 'Sport & Outdoor',
         products: 2,
         image: category3,
+        rating: 4.8,
+        reviews: 5,
     },
     {
         title: 'Jewelry & Watches',
         products: 3,
         image: category4,
+        rating: 4.2,
+        reviews: 7,
     },
     {
         title: 'Health & Beauty',
         products: 3,
         image: category5,
+        rating: 4.6,
+        reviews: 6,
     },
 ]
 
-export default function CategorySlider() {
+export default function TopRatedStore() {
     return (
         <div className="py-12">
             <div className="container mx-auto px-4">
+                <h2 className="text-3xl md:text-4xl font-bold mb-8">
+                    Top Rated Store
+                </h2>
                 <Swiper
                     modules={[Pagination, Autoplay]}
                     pagination={{
@@ -126,6 +150,16 @@ export default function CategorySlider() {
                                     <p className={`text-sm font-medium text-gray-900`}>
                                         {category.products} Products
                                     </p>
+                                    {/* Star Rating */}
+                                    <div className="flex items-center gap-1 absolute bottom-4 right-2">
+                                        <div className="flex items-center text-[#FBB528]">
+                                            {[...Array(1)].map((_, i) => (
+                                                <FaStar key={i} className="w-[0.875rem] h-[0.875rem]" />
+                                            ))}
+                                            <span className="text-xs text-gray-900 font-semibold">{category.rating}</span>
+                                        </div>
+                                        <span className="text-xs text-gray-900 font-semibold`">({category.reviews})</span>
+                                    </div>
                                 </div>
 
                                 {/* Hover Overlay */}

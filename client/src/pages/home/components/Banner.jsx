@@ -55,14 +55,14 @@ export default function Banner() {
                         <SwiperSlide key={index}>
                             <div className="flex items-center h-full">
                                 <div className="flex-1 pr-8">
-                                    <h3 className="text-lg font-medium mb-3">{slide.subtitle}</h3>
-                                    <h2 className="text-[40px] leading-tight font-bold text-[#1a1a4b] mb-4">
+                                    <h3 className="text-sm md:text-lg font-medium mb-3">{slide.subtitle}</h3>
+                                    <h2 className="text-[24px] sm:text-[30px] md:text-[40px] leading-tight font-bold text-[#1a1a4b] mb-4">
                                         {slide.title}
                                     </h2>
-                                    <p className="text-gray-600 mb-8 max-w-lg">
+                                    <p className="text-xs sm:text-sm md:text-base text-gray-600 mb-8 max-w-lg">
                                         {slide.description}
                                     </p>
-                                    <button className="bg-[#FBB528] text-white px-8 py-3 rounded hover:bg-[#e5a622] transition-colors">
+                                    <button className="bg-[#FBB528] text-white px-8 py-3 rounded hover:bg-[#e5a622] transition-colors whitespace-nowrap">
                                         {slide.buttonText}
                                     </button>
                                 </div>
@@ -70,7 +70,7 @@ export default function Banner() {
                                     <img
                                         src={slide.image}
                                         alt={slide.title}
-                                        className="w-[350px] h-full object-cover ml-auto"
+                                        className="w-[350px] h-full min-h-[180px] object-cover ml-auto"
                                     />
                                 </div>
                             </div>

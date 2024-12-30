@@ -42,7 +42,7 @@ export default function Topbar() {
     ]
 
     return (
-        <div className="bg-[#F7F7F7] text-gray-900 text-xs font-semibold border-b-2 border-gray-200">
+        <div className="bg-[#F7F7F7] text-gray-900 text-xs font-semibold border-b-2 border-gray-200 hidden lg:block">
             <div className="container mx-auto px-4">
                 <div className="flex items-center justify-between h-10">
                     {/* Left Navigation */}

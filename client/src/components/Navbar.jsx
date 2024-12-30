@@ -6,7 +6,7 @@ import { SlRefresh } from "react-icons/sl";
 
 export default function Navbar() {
     return (
-        <div className="bg-white">
+        <div className="bg-white hidden lg:block">
             <div className="container mx-auto px-4">
                 <div className="flex items-center gap-12 h-14">
                     {/* Left Side - Shop By Category */}
