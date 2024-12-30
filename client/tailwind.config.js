@@ -4,13 +4,15 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    screens: {
+      'xs': '480px',
+      'sm': '576px',   
+      'md': '768px',   
+      'lg': '992px',   
+      'xl': '1280px', 
+    },
     extend: {
-      screens: {
-        'sm': '576px',   
-        'md': '768px',   
-        'lg': '992px',   
-        'xl': '1200px',  
-      },
+      // other extensions can go here
     },
   },
   plugins: [],

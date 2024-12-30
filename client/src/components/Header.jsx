@@ -3,7 +3,7 @@ import { IoSearchOutline } from 'react-icons/io5'
 import { FiHeart, FiShoppingCart, FiRefreshCw } from 'react-icons/fi'
 import { IoChevronDown, IoMenu, IoClose } from 'react-icons/io5'
 import { Link } from 'react-router-dom'
-import Logo from '../assets/logo.png'
+import Logo from '../assets/logo.webp'
 import { useState } from 'react'
 import Sidebar from './Sidebar'
 

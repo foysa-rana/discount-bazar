@@ -11,7 +11,7 @@ const ProductCard = ({ product, border }) => {
                     <img
                         src={product.image}
                         alt={product.name}
-                        className="w-full aspect-square object-cover"
+                        className="w-full max-h-[15rem] aspect-square object-cover"
                     />
                     <button className="absolute top-[5%] right-[5%] w-[2rem] h-[2rem] bg-white rounded-full flex items-center justify-center shadow-md">
                         <FiHeart className="w-[1.2rem] h-[1.2rem]" />

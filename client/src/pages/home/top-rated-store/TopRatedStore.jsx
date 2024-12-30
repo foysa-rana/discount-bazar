@@ -107,31 +107,31 @@ export default function TopRatedStore() {
                     breakpoints={{
                         320: {
                             slidesPerView: 1,
-                            spaceBetween: 20,
+                            spaceBetween: 40,
                         },
                         480: {
                             slidesPerView: 2,
-                            spaceBetween: 20,
+                            spaceBetween: 40,
                         },
                         768: {
                             slidesPerView: 3,
-                            spaceBetween: 20,
+                            spaceBetween: 40,
                         },
                         992: {
                             slidesPerView: 4,
-                            spaceBetween: 20,
+                            spaceBetween: 40,
                         },
-                        1024: {
+                        1280: {
                             slidesPerView: 5,
-                            spaceBetween: 20,
+                            spaceBetween: 40,
                         },
                     }}
                     loop={true}
-                    className="!pb-12"
+                    className="!pb-12 h-[250px]"
                 >
                     {categories.map((category, index) => (
-                        <SwiperSlide key={index}>
-                            <div className="relative rounded-lg overflow-hidden group cursor-pointer min-w-[200px] min-h-[200px]">
+                        <SwiperSlide key={index} className="h-full">
+                            <div className="relative rounded-lg overflow-hidden group cursor-pointer h-full">
                                 {/* Background with matching color */}
                                 <div className={`absolute inset-0 opacity-95`} />
 
@@ -143,7 +143,7 @@ export default function TopRatedStore() {
                                 />
 
                                 {/* Content */}
-                                <div className="absolute flex flex-col items-center justify-end text-center w-[90%] p-4 bg-[#f7f7f7c4] bottom-1 left-1/2 transform -translate-x-1/2 whitespace-nowrap rounded-lg text-gray-900">
+                                <div className="absolute flex flex-col items-center justify-end text-center w-[90%] p-4 bg-[#f7f7f7c4] bottom-1 left-1/2 transform -translate-x-1/2 rounded-lg text-gray-900">
                                     <h3 className={`text-lg font-bold mb-2`}>
                                         {category.title}
                                     </h3>
@@ -158,7 +158,7 @@ export default function TopRatedStore() {
                                             ))}
                                             <span className="text-xs text-gray-900 font-semibold">{category.rating}</span>
                                         </div>
-                                        <span className="text-xs text-gray-900 font-semibold`">({category.reviews})</span>
+                                        <span className="text-xs text-gray-900 font-semibold">({category.reviews})</span>
                                     </div>
                                 </div>
 

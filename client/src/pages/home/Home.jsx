@@ -10,6 +10,7 @@ import FeaturedProduct from './featured-product/FeaturedProduct'
 import ServiceBanner from './service-banner/ServiceBanner'
 import BestSellingProduct from './best-selling-product/BestSellingProduct'
 import TopRatedStore from './top-rated-store/TopRatedStore'
+import LatestPost from './latest-post/LatestPost'
 const Home = () => {
     return (
         <>
@@ -24,6 +25,7 @@ const Home = () => {
             <ServiceBanner />
             <BestSellingProduct />
             <TopRatedStore />
+            <LatestPost />
         </>
     )
 }

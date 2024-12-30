@@ -2,19 +2,19 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaFacebookF, FaArrowRight } from 'react-icons/fa'
 import { HiMail } from "react-icons/hi";
-import footerLogo from '../assets/footer_logo.png'
+import footerLogo from '../assets/footer-logo.webp'
 
 export default function Footer() {
     return (
         <footer className="bg-[#222222] text-white">
             {/* Newsletter Section */}
             <div className="border-b border-[#333333]">
-                <div className="container mx-auto px-4 py-2 flex flex-col md:flex-row md:items-center justify-between">
+                <div className="container mx-auto px-4 py-2 flex flex-col lg:flex-row items-center justify-between">
                     {/* Logo */}
-                    <Link to="/" className="hidden lg:inline-block">
+                    <Link to="/" className="inline-block">
                         <img src={footerLogo} alt="footer logo" className="w-full h-[50px]" />
                     </Link>
-                    <div className="flex items-start mb-4 sm:mb-0">
+                    <div className="flex  mb-4 sm:mb-0">
                         <HiMail className=" mr-3" size={70} />
                         <div>
                             <h3 className="font-semibold text-sm mt-3">SUBSCRIBE TO OUR NEWSLETTER</h3>
@@ -53,7 +53,7 @@ export default function Footer() {
                     </div>
 
                     {/* Company Links */}
-                    <div className='text-center sm:text-left'>
+                    <div className='text-left'>
                         <h3 className="font-semibold mb-4">Company</h3>
                         <ul className="space-y-1">
                             <li><Link to="#" className="text-xs text-white hover:text-gray-400">About us</Link></li>
@@ -64,7 +64,7 @@ export default function Footer() {
                     </div>
 
                     {/* My Account Links */}
-                    <div className='text-center sm:text-left'>
+                    <div className='text-left'>
                         <h3 className="font-semibold mb-4">My Account</h3>
                         <ul className="space-y-1">
                             <li><Link to="#" className="text-xs text-white hover:text-gray-400">View cart</Link></li>
@@ -76,7 +76,7 @@ export default function Footer() {
                     </div>
 
                     {/* Customer Services Links */}
-                    <div className='text-center sm:text-left'>
+                    <div className='text-left'>
                         <h3 className="font-semibold mb-4">Customer Services</h3>
                         <ul className="space-y-1">
                             <li><Link to="#" className="text-xs text-white hover:text-gray-400">Terms & Conditions</Link></li>
